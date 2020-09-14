@@ -107,18 +107,13 @@ class LoginPage extends StatelessWidget {
                         fontSize: 25.0,),),
                       ),
                     ),
-
                   ),
-
                 ),
                 ),
                 ],
             ),
           ),
-
-
       ),
-    
     );
   }
 }
