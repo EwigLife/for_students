@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:for_students/Screens/SignUp.dart';
+import 'Screens/Home.dart';
+import 'Screens/LoginScreen.dart';
 import 'Screens/SplashScreen.dart';
 
 
@@ -19,6 +22,11 @@ class ForStudents extends StatelessWidget {
         fontFamily: 'Kufam',
       ),
       home: SplashScreen(),
+      routes: <String, WidgetBuilder>{
+        '/LoginPage': (BuildContext context) => LoginPage(),
+        '/SignUp': (BuildContext context) => SignUp(),
+        '/Home': (BuildContext context) => Home(),
+      },
     );
   }
 }

@@ -132,7 +132,7 @@ class LoginPage extends StatelessWidget {
                     SizedBox(width: 5.0,),
                     InkWell(
                       onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => SignUp()));
+                        Navigator.of(context).pushNamed('/SignUp');
                       },
                       child: Text('SignUP',
                     style: TextStyle(
