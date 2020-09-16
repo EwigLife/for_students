@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "70013110676",
+    "firebase_url": "https://forstudents-b9b32.firebaseio.com",
+    "project_id": "forstudents-b9b32",
+    "storage_bucket": "forstudents-b9b32.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:70013110676:android:8973b95429368c89b3a781",
+        "android_client_info": {
+          "package_name": "com.earnerss.for_students"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "70013110676-pnalrhr25pf8j12p882a1qvv9snaeqv5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTehPwsWk5mmZQvWbPigGRzNPUO57xI0c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "70013110676-pnalrhr25pf8j12p882a1qvv9snaeqv5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
