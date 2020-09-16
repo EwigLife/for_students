@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:for_students/Controllers/authController.dart';
 import 'package:for_students/Screens/SignUp.dart';
 import 'package:for_students/Utils/constants.dart';
+import 'package:get/get.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key key}) : super(key: key);
+class LoginPage extends GetWidget<AuthController> {
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  
 
   @override
   Widget build(BuildContext context) {
@@ -47,12 +51,15 @@ class LoginPage extends StatelessWidget {
                 ),
                 TextFormField(
                   decoration: InputDecoration(labelText: 'Email'),
+                  controller: emailController,
                 ),
                 SizedBox(
                   height: 40.0,
                 ),
                 TextFormField(
                   decoration: InputDecoration(labelText: 'Password'),
+                  controller: passwordController,
+                  obscureText: true,
                 ),
                 SizedBox(
                   height: 10.0,
@@ -79,7 +86,11 @@ class LoginPage extends StatelessWidget {
                     shadowColor: Colors.black12,
                     elevation: 7.0,
                     child: GestureDetector(
-                      onTap: (){},
+                      onTap: (){
+                        controller.login(
+                          emailController.text, passwordController.text
+                        );
+                      },
                       child: Center(
                         child: Text('Login',
                         style: TextStyle(color: Colors.white,
@@ -132,7 +143,7 @@ class LoginPage extends StatelessWidget {
                     SizedBox(width: 5.0,),
                     InkWell(
                       onTap: (){
-                        Navigator.of(context).pushNamed('/SignUp');
+                        Get.to(SignUp());
                       },
                       child: Text('SignUP',
                     style: TextStyle(

@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:for_students/Controllers/authController.dart';
 import 'package:for_students/Utils/constants.dart';
+import 'package:get/get.dart';
 
-class SignUp extends StatelessWidget {
-  
+class SignUp extends GetWidget<AuthController> {
+
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController nameController = TextEditingController();
+  final TextEditingController displayNameController = TextEditingController();
+  final TextEditingController uidController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -15,24 +22,29 @@ class SignUp extends StatelessWidget {
             children: <Widget>[
               TextFormField(
                 decoration: InputDecoration(labelText: 'Full Name'),
+                controller: nameController,
               ),
               SizedBox(
                 height: 40,
               ),
               TextFormField(
                 decoration: InputDecoration(labelText: 'Display Name'),
+                controller: displayNameController,
               ),
               SizedBox(
                 height: 40,
               ),
               TextFormField(
                 decoration: InputDecoration(labelText: 'Email'),
+                controller: emailController,
               ),
               SizedBox(
                 height: 40,
               ),
               TextFormField(
                 decoration: InputDecoration(labelText: 'Password'),
+                controller: passwordController,
+                obscureText: true,
               ),
               SizedBox(
                 height: 40,
@@ -48,7 +60,7 @@ class SignUp extends StatelessWidget {
                     elevation: 7.0,
                     child: GestureDetector(
                       onTap: (){
-                        Navigator.of(context).pushNamed('/Home');
+                        controller.createUser(nameController.text, emailController.text, passwordController.text, uidController.text);
                       },
                       child: Center(
                         child: Text('Sign Up',
@@ -62,7 +74,7 @@ class SignUp extends StatelessWidget {
                 SizedBox(height: 20.0,),
                     InkWell(
                       onTap: (){
-                        Navigator.of(context).pushNamed('/LoginPage');
+                        Get.back();
                       },
                       child: Text('Go Back',
                     style: TextStyle(
