@@ -16,8 +16,8 @@ class ForStudents extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(//we have to conver Material App into GetMaterialApp to run under get package
-      //this lines wad missing
+    return GetMaterialApp(//we have to convert Material App into GetMaterialApp to run under get package
+      //this lines was missing
       initialBinding: AuthBinding(),
       //lines above this
       debugShowCheckedModeBanner: false,
